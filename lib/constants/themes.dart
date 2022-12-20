@@ -5,7 +5,7 @@ import 'colors.dart';
 class Themes {
   /// Light theme
   static final lightTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: Colors.transparent,
     appBarTheme: const AppBarTheme(color: CustomColors.primaryBlue),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
         showSelectedLabels: false,
