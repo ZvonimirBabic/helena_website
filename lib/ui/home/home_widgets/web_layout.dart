@@ -79,7 +79,8 @@ class WebLayout extends StatelessWidget {
                                         AspectRatio(
                                           aspectRatio: 3 / 2,
                                           child: Container(
-                                            margin: EdgeInsets.only(right: 16),
+                                            margin: const EdgeInsets.only(
+                                                right: 16),
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(8),
@@ -93,7 +94,7 @@ class WebLayout extends StatelessWidget {
                                             ),
                                           ),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 16,
                                         ),
                                         Text(
@@ -109,7 +110,7 @@ class WebLayout extends StatelessWidget {
                                         AspectRatio(
                                           aspectRatio: 3 / 2,
                                           child: Container(
-                                            margin: EdgeInsets.only(
+                                            margin: const EdgeInsets.only(
                                                 right: 16, left: 16),
                                             decoration: BoxDecoration(
                                               borderRadius:
@@ -124,7 +125,7 @@ class WebLayout extends StatelessWidget {
                                             ),
                                           ),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 16,
                                         ),
                                         Text(
@@ -140,7 +141,8 @@ class WebLayout extends StatelessWidget {
                                         AspectRatio(
                                           aspectRatio: 3 / 2,
                                           child: Container(
-                                            margin: EdgeInsets.only(left: 16),
+                                            margin:
+                                                const EdgeInsets.only(left: 16),
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(8),
@@ -154,7 +156,7 @@ class WebLayout extends StatelessWidget {
                                             ),
                                           ),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 16,
                                         ),
                                         Text(
@@ -222,7 +224,7 @@ class WebLayout extends StatelessWidget {
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Container(
                   color: Colors.black26,
                   height: 50,
