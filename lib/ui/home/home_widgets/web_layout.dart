@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:transparent_image/transparent_image.dart';
 
 import '../../../constants/assets.dart';
 import '../../../constants/text_styles.dart';
@@ -7,7 +6,6 @@ import 'overflow_bar_button.dart';
 
 class WebLayout extends StatelessWidget {
   const WebLayout({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,11 +30,15 @@ class WebLayout extends StatelessWidget {
                           width: MediaQuery.of(context).size.width,
                           child: Stack(
                             children: [
-                              Image.asset(
-                                ImageAssets.landscape,
+                              FadeInImage(
                                 height: 300,
                                 width: MediaQuery.of(context).size.width,
                                 fit: BoxFit.cover,
+                                placeholder:
+                                    MemoryImage(ImageAssets.kTransparentImage),
+                                image: const AssetImage(
+                                  ImageAssets.landscape,
+                                ),
                               ),
                               Positioned(
                                   left: 0,
@@ -45,12 +47,14 @@ class WebLayout extends StatelessWidget {
                                   child: Row(
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsets.all(32.0),
-                                        child: Image.asset(
-                                          ImageAssets.shrek,
-                                          height: 128,
-                                        ),
-                                      ),
+                                          padding: const EdgeInsets.all(32.0),
+                                          child: FadeInImage(
+                                            height: 128,
+                                            image: const AssetImage(
+                                                ImageAssets.shrek),
+                                            placeholder: MemoryImage(
+                                                ImageAssets.kTransparentImage),
+                                          )),
                                     ],
                                   ))
                             ],
@@ -103,14 +107,13 @@ class WebLayout extends StatelessWidget {
                                             ),
                                             clipBehavior: Clip.antiAlias,
                                             child: FadeInImage(
-                                              image:
-                                                  Image.asset(ImageAssets.fresh)
-                                                      as ImageProvider,
+                                              image: const AssetImage(
+                                                  ImageAssets.fresh),
                                               fit: BoxFit.cover,
                                               alignment: Alignment.bottomCenter,
-                                              placeholder: Image.memory(
-                                                      kTransparentImage)
-                                                  as ImageProvider,
+                                              placeholder: MemoryImage(
+                                                  ImageAssets
+                                                      .kTransparentImage),
                                             ),
                                           ),
                                         ),
@@ -138,14 +141,13 @@ class WebLayout extends StatelessWidget {
                                             ),
                                             clipBehavior: Clip.antiAlias,
                                             child: FadeInImage(
-                                              image: Image.asset(
-                                                      ImageAssets.chicken)
-                                                  as ImageProvider,
+                                              image: const AssetImage(
+                                                  ImageAssets.chicken),
                                               fit: BoxFit.cover,
                                               alignment: Alignment.bottomCenter,
-                                              placeholder: Image.memory(
-                                                      kTransparentImage)
-                                                  as ImageProvider,
+                                              placeholder: MemoryImage(
+                                                  ImageAssets
+                                                      .kTransparentImage),
                                             ),
                                           ),
                                         ),
@@ -170,18 +172,16 @@ class WebLayout extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(8),
-                                              color: Colors.blue,
                                             ),
                                             clipBehavior: Clip.antiAlias,
                                             child: FadeInImage(
-                                              image:
-                                                  Image.asset(ImageAssets.hippo)
-                                                      as ImageProvider,
+                                              image: const AssetImage(
+                                                  ImageAssets.hippo),
                                               fit: BoxFit.fitWidth,
                                               alignment: Alignment.topCenter,
-                                              placeholder: Image.memory(
-                                                      kTransparentImage)
-                                                  as ImageProvider,
+                                              placeholder: MemoryImage(
+                                                  ImageAssets
+                                                      .kTransparentImage),
                                             ),
                                           ),
                                         ),
