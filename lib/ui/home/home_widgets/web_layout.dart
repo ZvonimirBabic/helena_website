@@ -37,6 +37,24 @@ class WebLayout extends StatelessWidget {
                                 width: MediaQuery.of(context).size.width,
                                 fit: BoxFit.cover,
                               ),
+                              Positioned(
+                                  left: 0,
+                                  right: 0,
+                                  top: 0,
+                                  child: Row(
+                                    children: [
+                                      Hero(
+                                        tag: 'Logo',
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(32.0),
+                                          child: Image.asset(
+                                            ImageAssets.shrek,
+                                            height: 128,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ))
                             ],
                           ),
                         ),

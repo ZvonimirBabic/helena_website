@@ -4,4 +4,5 @@ class ImageAssets {
   static const chicken = 'assets/images/chicken.jpg';
   static const fresh = 'assets/images/fresh.jpg';
   static const hippo = 'assets/images/hippo.jpg';
+  static const shrek = 'assets/images/shrek.png';
 }
