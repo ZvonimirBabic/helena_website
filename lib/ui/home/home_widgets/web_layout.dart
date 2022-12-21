@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 import '../../../constants/assets.dart';
 import '../../../constants/text_styles.dart';
@@ -43,14 +44,11 @@ class WebLayout extends StatelessWidget {
                                   top: 0,
                                   child: Row(
                                     children: [
-                                      Hero(
-                                        tag: 'Logo',
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(32.0),
-                                          child: Image.asset(
-                                            ImageAssets.shrek,
-                                            height: 128,
-                                          ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(32.0),
+                                        child: Image.asset(
+                                          ImageAssets.shrek,
+                                          height: 128,
                                         ),
                                       ),
                                     ],
@@ -102,13 +100,17 @@ class WebLayout extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(8),
-                                              color: Colors.blue,
                                             ),
                                             clipBehavior: Clip.antiAlias,
-                                            child: Image.asset(
-                                              ImageAssets.fresh,
+                                            child: FadeInImage(
+                                              image:
+                                                  Image.asset(ImageAssets.fresh)
+                                                      as ImageProvider,
                                               fit: BoxFit.cover,
                                               alignment: Alignment.bottomCenter,
+                                              placeholder: Image.memory(
+                                                      kTransparentImage)
+                                                  as ImageProvider,
                                             ),
                                           ),
                                         ),
@@ -133,13 +135,17 @@ class WebLayout extends StatelessWidget {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(8),
-                                              color: Colors.blue,
                                             ),
                                             clipBehavior: Clip.antiAlias,
-                                            child: Image.asset(
-                                              ImageAssets.chicken,
+                                            child: FadeInImage(
+                                              image: Image.asset(
+                                                      ImageAssets.chicken)
+                                                  as ImageProvider,
                                               fit: BoxFit.cover,
                                               alignment: Alignment.bottomCenter,
+                                              placeholder: Image.memory(
+                                                      kTransparentImage)
+                                                  as ImageProvider,
                                             ),
                                           ),
                                         ),
@@ -167,10 +173,15 @@ class WebLayout extends StatelessWidget {
                                               color: Colors.blue,
                                             ),
                                             clipBehavior: Clip.antiAlias,
-                                            child: Image.asset(
-                                              ImageAssets.hippo,
+                                            child: FadeInImage(
+                                              image:
+                                                  Image.asset(ImageAssets.hippo)
+                                                      as ImageProvider,
                                               fit: BoxFit.fitWidth,
                                               alignment: Alignment.topCenter,
+                                              placeholder: Image.memory(
+                                                      kTransparentImage)
+                                                  as ImageProvider,
                                             ),
                                           ),
                                         ),
