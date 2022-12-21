@@ -19,7 +19,7 @@ class Website extends StatelessWidget {
         onGenerateTitle: (_) => 'appName'.tr,
         theme: Themes.lightTheme,
         darkTheme: Themes.darkTheme,
-        initialRoute: Routes.splashScreen,
+        initialRoute: Routes.homeScreen,
         getPages: pages,
         locale: Localization.locale,
         fallbackLocale: Localization.fallbackLocale,
