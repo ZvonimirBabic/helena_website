@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helena_website/ui/home/home_widgets/homepage_image_widget.dart';
 
 import '../../../constants/assets.dart';
 import '../../../constants/text_styles.dart';
@@ -92,109 +93,22 @@ class WebLayout extends StatelessWidget {
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Flexible(
-                                    child: Column(
-                                      children: [
-                                        AspectRatio(
-                                          aspectRatio: 3 / 2,
-                                          child: Container(
-                                            margin: const EdgeInsets.only(
-                                                right: 16),
-                                            decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(8),
-                                            ),
-                                            clipBehavior: Clip.antiAlias,
-                                            child: FadeInImage(
-                                              image: const AssetImage(
-                                                  ImageAssets.fresh),
-                                              fit: BoxFit.cover,
-                                              alignment: Alignment.bottomCenter,
-                                              placeholder: MemoryImage(
-                                                  ImageAssets
-                                                      .kTransparentImage),
-                                            ),
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          height: 16,
-                                        ),
-                                        Text(
-                                          'Hedgehog',
-                                          style: CustomTextStyles.bodyBold,
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                  Flexible(
-                                    child: Column(
-                                      children: [
-                                        AspectRatio(
-                                          aspectRatio: 3 / 2,
-                                          child: Container(
-                                            margin: const EdgeInsets.only(
-                                                right: 16, left: 16),
-                                            decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(8),
-                                            ),
-                                            clipBehavior: Clip.antiAlias,
-                                            child: FadeInImage(
-                                              image: const AssetImage(
-                                                  ImageAssets.chicken),
-                                              fit: BoxFit.cover,
-                                              alignment: Alignment.bottomCenter,
-                                              placeholder: MemoryImage(
-                                                  ImageAssets
-                                                      .kTransparentImage),
-                                            ),
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          height: 16,
-                                        ),
-                                        Text(
-                                          'Chicken',
-                                          style: CustomTextStyles.bodyBold,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Flexible(
-                                    child: Column(
-                                      children: [
-                                        AspectRatio(
-                                          aspectRatio: 3 / 2,
-                                          child: Container(
-                                            margin:
-                                                const EdgeInsets.only(left: 16),
-                                            decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(8),
-                                            ),
-                                            clipBehavior: Clip.antiAlias,
-                                            child: FadeInImage(
-                                              image: const AssetImage(
-                                                  ImageAssets.hippo),
-                                              fit: BoxFit.fitWidth,
-                                              alignment: Alignment.topCenter,
-                                              placeholder: MemoryImage(
-                                                  ImageAssets
-                                                      .kTransparentImage),
-                                            ),
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          height: 16,
-                                        ),
-                                        Text(
-                                          'Hippopotamus',
-                                          style: CustomTextStyles.bodyBold,
-                                        )
-                                      ],
-                                    ),
-                                  ),
+                                children: const [
+                                  HomePageImageWidget(
+                                      imageAsset: ImageAssets.fresh,
+                                      imageText: 'Hedgehog',
+                                      fit: BoxFit.cover,
+                                      alignment: Alignment.bottomCenter),
+                                  HomePageImageWidget(
+                                      imageAsset: ImageAssets.chicken,
+                                      imageText: 'Chicken',
+                                      fit: BoxFit.cover,
+                                      alignment: Alignment.bottomCenter),
+                                  HomePageImageWidget(
+                                      imageAsset: ImageAssets.hippo,
+                                      imageText: 'Hippopotamus',
+                                      fit: BoxFit.fitWidth,
+                                      alignment: Alignment.topCenter),
                                 ],
                               )
                             ],
