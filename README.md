@@ -1,16 +1,8 @@
 # helena_website
 
-Helena's website
+Website made in Flutter
+Currently hosted on Netlify
+https://tiny-klepon-d621f0.netlify.app
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![app2](https://user-images.githubusercontent.com/57459616/208947911-737a45ff-9d13-4b8d-8e23-330aeb3d2162.png)
